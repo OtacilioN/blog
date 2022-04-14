@@ -22,7 +22,7 @@
   background: var(--background);
   left: 0;
   max-width: 40rem;
-  width: 85%;
+  width: 45%;
   padding: var(--space-2xl) var(--size-gutter) 0;
   position: absolute;
 }
