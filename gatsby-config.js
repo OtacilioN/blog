@@ -10,7 +10,7 @@ const contentfulConfig = {
 }
 
 const gTagOptions = {
-  trackingIds: ['UA-150871174-1'],
+  trackingIds: ['G-PNN1KK1EG1'],
   pluginConfig: {
     head: false,
   },
