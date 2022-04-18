@@ -10,7 +10,7 @@ const contentfulConfig = {
 }
 
 const gTagOptions = {
-  trackingIds: ['G-PNN1KK1EG1'],
+  trackingIds: ['UA-150871174-1'],
   gtagConfig: {
     anonymize_ip: true,
     cookie_expires: 0,
