@@ -9,6 +9,18 @@ const contentfulConfig = {
     process.env.CONTENTFUL_DELIVERY_TOKEN,
 }
 
+const gTagOptions = {
+  trackingIds: ['G-5ERXBNVGQC'],
+  gtagConfig: {
+    anonymize_ip: true,
+    cookie_expires: 0,
+  },
+  pluginConfig: {
+    head: false,
+    respectDNT: true,
+  },
+}
+
 if (process.env.CONTENTFUL_HOST) {
   contentfulConfig.host = process.env.CONTENTFUL_HOST
   contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
@@ -39,6 +51,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: gTagOptions,
     },
   ],
 }
