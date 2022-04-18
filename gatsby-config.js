@@ -16,6 +16,19 @@ const gTagOptions = {
   },
 }
 
+const robotsOptions = {
+  host: 'https://otaciliomaia.com/',
+  sitemap: 'https://otaciliomaia.com/sitemap/sitemap-0.xml',
+  env: {
+    development: {
+      policy: [{ userAgent: '*', disallow: ['/'] }],
+    },
+    production: {
+      policy: [{ userAgent: '*', allow: '/' }],
+    },
+  },
+}
+
 if (process.env.CONTENTFUL_HOST) {
   contentfulConfig.host = process.env.CONTENTFUL_HOST
   contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
@@ -50,6 +63,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: gTagOptions,
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: robotsOptions,
     },
   ],
 }
