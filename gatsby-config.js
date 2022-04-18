@@ -26,6 +26,7 @@ module.exports = {
   siteMetadata: {
     title: 'Otacilio Maia',
     description: 'Conteúdos para pessoas desenvolvedoras.',
+    siteUrl: 'https://otaciliomaia.com',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -34,6 +35,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-image',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
