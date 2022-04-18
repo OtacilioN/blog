@@ -11,13 +11,8 @@ const contentfulConfig = {
 
 const gTagOptions = {
   trackingIds: ['UA-150871174-1'],
-  gtagConfig: {
-    anonymize_ip: true,
-    cookie_expires: 0,
-  },
   pluginConfig: {
     head: false,
-    respectDNT: true,
   },
 }
 
